@@ -1,0 +1,392 @@
+/* General styles */
+body {
+  font-family: "EB Garamond", serif;
+  margin: 0;
+  padding: 0;
+  background: url("../images/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  display: block;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  background-color: #fff;
+  color: #333;
+  position: relative; 
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-title {
+  margin: 1em 0; /* Space above the title */
+  text-align: center; /* Center the title */
+  font-size: 2rem; /* Slightly larger font for visibility */
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background-color: #f0f0f0;
+}
+
+.navbar ul li {
+  margin: 0 1em; /* Add spacing between items */
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #333; /* Dark text for light mode */
+  padding: 0.8em 1.5em;
+  font-size: 1.2rem;
+  display: inline-block;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.navbar ul li a:hover {
+  background-color: #ddd;
+  transform: scale(1.1); /* Subtle hover effect */
+}
+
+main {
+  max-width: 80%;
+  margin: 2em auto;
+  font-size: 1.2rem; /* Larger default text size */
+  min-height: calc(100vh - 120px); /* Adjust height dynamically */
+  flex: 1;
+}
+
+.introduction {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.introduction,
+#date-time-section {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1.5em;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.intro-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.intro-text h2,
+.education-section h2 {
+  font-family: "Moon Dance", cursive;
+  font-size: 2.5rem;
+  margin-bottom: 1em;
+  color: #444;
+}
+
+.intro-text p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+}
+
+.intro-image {
+  flex: 1;
+  text-align: center;
+  min-width: 300px;
+}
+
+.profile-image {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 50%;
+  margin-bottom: 1em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.intro-image figcaption {
+  font-style: italic;
+  color: #666;
+  margin-top: 0.5em;
+}
+
+footer {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Semi-transparent white background */
+  text-align: center;
+  padding: 1em 0;
+  color: #333;
+  font-size: 1.1rem; /* Larger footer text */
+  position: fixed; /* Keep footer at the bottom */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2); /* Add shadow for separation */
+  z-index: 10; /* Ensure it stays above content */
+  position: relative;
+}
+
+footer a {
+  text-decoration: none;
+  margin: 0 5px;
+  display: inline-block;
+}
+
+footer img {
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  opacity: 0.9; /* Slight transparency for icons */
+  transition: opacity 0.3s, transform 0.2s;
+}
+
+footer img:hover {
+  opacity: 1; /* Full opacity on hover */
+  transform: scale(1.1); /* Subtle hover effect */
+}
+
+/* Content card layout for all pages */
+.content-card {
+  /* display: grid; */
+  grid-template-columns: 1fr auto;
+  gap: 2em;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3em 4em;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 3em auto;
+  width: 80%;
+  max-width: 1000px;
+}
+
+.content-card h2 {
+  font-family: "Moon Dance", cursive;
+  font-size: 2.5rem; /* Larger card titles */
+  margin-bottom: 1em;
+  color: #444;
+}
+
+.content-card ul,
+.content-card ol {
+  text-align: left;
+  margin: 1em auto;
+  max-width: 90%;
+  line-height: 1.8; /* Improved line spacing for readability */
+}
+
+/* Anchor Link Styling */
+.anchor-link {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #44286a;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.anchor-link:hover {
+  background-color: #5c378c;
+  transform: scale(1.05);
+}
+
+a:visited {
+  color: #e1e6e3; /* Custom color purple */
+}
+
+#theme-toggle {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  padding: 0.5em 1em;
+}
+
+#theme-toggle:hover {
+  background-color: #777;
+}
+
+.dark-theme {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-theme header {
+  background-color: #3f3e3e;
+  color: #ffffff; /* Ensure header text is bright in dark mode */
+}
+
+.dark-theme .navbar {
+  background-color: #2c2c2c;
+}
+
+.dark-theme .navbar ul {
+  background-color: #2c2c2c; /* Ensure the list container matches navbar background */
+}
+
+.dark-theme .navbar ul li a {
+  color: #e0e0e0; /* Light text for dark mode */
+  background-color: transparent;
+}
+
+.dark-theme .navbar ul li a:hover {
+  background-color: #444; /* Slightly lighter hover effect in dark mode */
+}
+
+.dark-theme a {
+  color: #bb86fc;
+}
+
+.dark-theme .introduction,
+.dark-theme #date-time-section,
+.dark-theme .content-card {
+  background: rgba(40, 40, 40, 0.9);
+  color: #e0e0e0;
+}
+
+.dark-theme footer {
+  background-color: rgba(
+    96,
+    94,
+    94,
+    0.85
+  ); /* Slight transparency in dark mode */
+  color: #e0e0e0;
+}
+
+.dark-theme .intro-text h2,
+.dark-theme .content-card h2,
+.dark-theme .education-section h2 {
+  color: #ffffff; /* Bright title in dark mode */
+}
+
+.dark-theme .intro-text p {
+  color: #e0e0e0; /* Lighter paragraph text in dark mode */
+}
+
+.dark-theme .intro-image figcaption {
+  color: #bbbbbb; /* Light figcaption text in dark mode */
+}
+
+.dark-theme .education-section {
+  background: rgba(54, 53, 53, 0.9); /* Dark, semi-transparent background */
+  color: #e0e0e0; /* Light text for better readability */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.566); /* Slightly stronger shadow for night mode */
+}
+
+.dark-theme .course-list ul {
+  color: #e0e0e0; /* Ensure the list items are light-colored */
+}
+
+.dark-theme .university-logo {
+  filter: drop-shadow(
+    2px 4px 6px rgba(255, 255, 255, 0.3)
+  ); /* Light shadow for contrast in dark mode */
+}
+
+#date-time-section {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1.5em;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 2em;
+}
+
+#date-time-button {
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  border: none;
+  background-color: #333;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#date-time-button:hover {
+  background-color: #555;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2em;
+}
+
+/* Smooth transitions for theme switching */
+body,
+header,
+.navbar,
+.introduction,
+footer,
+.intro-text h2,
+.intro-text p,
+.intro-image figcaption {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.education-section {
+  width: 100%;
+  padding: 2em;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.8); /* Light, semi-transparent background */
+  border-radius: 12px; /* Soft rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  margin: 2em auto;
+  max-width: 90%; /* Ensure content doesn’t stretch edge to edge */
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two flexible columns */
+  gap: 2em;
+  align-items: center;
+}
+
+.course-list {
+  text-align: left;
+  padding: 1em; /* Add some padding inside the list */
+}
+
+.course-list ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  font-size: 1.2rem;
+  line-height: 1.8; /* Improve readability */
+}
+
+.logo-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1em; /* Add padding around the logo */
+}
+
+.university-logo {
+  width: 150px;
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(
+    2px 4px 6px rgba(0, 0, 0, 0.3)
+  ); /* Add a shadow to the logo for better contrast */
+}
