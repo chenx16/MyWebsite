@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const dateTimeOutput = document.getElementById("date-time-output");
   
     const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
+    if (savedTheme === "Dark") {
       document.body.classList.add("dark-theme");
       themeToggleButton.textContent = "Light Mode";
     }
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.classList.toggle("dark-theme");
       const isDark = document.body.classList.contains("dark-theme");
       themeToggleButton.textContent = isDark ? "Light Mode" : "Dark Mode";
-      localStorage.setItem("theme", isDark ? "dark" : "light");
+      localStorage.setItem("theme", isDark ? "Dark" : "Light");
     });
   
     dateTimeButton.addEventListener("click", () => {
